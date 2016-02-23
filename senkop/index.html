@@ -30,6 +30,7 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			
 		</script>
 
 		<!--[if lt IE 9]>
@@ -42,15 +43,20 @@
 			p.bubble::after { content:" ";position:absolute;right:100%;top:50%;margin-top:-10px;margin-right:3px;border-width:10px;border-color:transparent #a00 transparent transparent; border-style:solid;}
 			p.warning { padding:0.25em; border:3px solid #fd3; background:#ffd; border-radius:3px; }
 			.tablo { position:absolute; top:0; }
-			.tablo tr { background:rgba(255,255,255,0.95); }
+			.tablo tbody { background:rgba(255,255,255,0.95); }
 			.tablo thead tr { background:#c96; color:white;font-weight:bold; }
-			.tablo td { font-size:0.5em; }
+			.reveal .tablo td { border:none; font-size:0.55em; }
+			.reveal tr.top.visible td { border-top:1px solid #666; }
+			.slides::after { position: absolute; width:100%; height:100%; left:0; bottom:0; content:" "; background:url("../logo/dairesel-123x123.png") no-repeat bottom left; z-index:-1; opacity:0.6; }
+			#hoca { display:none; }
+			.hocali #hoca { position:absolute; left:10px; top:10px; padding:1em; border-radius:10px; border:3px solid #333; background:rgba(255,255,200,0.8); color:#a33; display:block; font-size:16px; }
 		</style>
 	</head>
 
 	<body>
 
 		<div class="reveal">
+			<div id="hoca"></div>
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
@@ -147,13 +153,17 @@
 					</div>
 				</section>
 				<section>
-					<img src="muayene2.png" class="mucerred">
-					<table class="tablo">
+					<img src="senkop-ilac-t.png" style="float:left; margin-right:0.5em;width:45%;">
+					<img src="senkop-ilac-r.png" style="float:left; margin-left:0.5em;width:45%;">
+				</section>
+				<section>
+					<img src="muayene.png" class="mucerred">
+					<table class="tablo fragment">
 						<thead>
 							<tr>
-								<td>Sistem</td>
-								<td>Bulgu</td>
-								<td>Açıklama</td>
+								<td width="20%">Sistem</td>
+								<td width="30%">Bulgu</td>
+								<td width="50%">Açıklama</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -162,26 +172,189 @@
 								<td class="fragment">Nabız ve ritm</td>
 								<td class="fragment">Taşikardi, bradikardi, diğer disritmiler</td>
 							</tr>
-							<tr class="fragment">
-								<td>Solunum sayısı ve derinliği</td>
+							<tr>
+								<td class="fragment">Solunum sayısı ve derinliği</td>
 								<td class="fragment">Takipne: hipoksi, hiperventilasyon veya pulmoner emboli</td>
 							</tr>
-							<tr class="fragment">
-								<td>Kan basıncı</td>
+							<tr>
+								<td class="fragment">Kan basıncı</td>
 								<td class="fragment">Şok, hipovolemi veya ortostaza yol açabilen ilaç kullanımı</td>
 							</tr>
-							<tr class="fragment">
-								<td>Vücut ısısı</td>
+							<tr>
+								<td class="fragment">Vücut ısısı</td>
 								<td class="fragment">Sepsis, dehidratasyon, ortostaz</td>
 							</tr>
-							<tr class="fragment">
+							<tr class="fragment top">
 								<td>Deri</td>
 								<td class="fragment">Renk, terleme</td>
 								<td class="fragment">Organ perfüzyonunda azalmanın işaretleri</td>
 							</tr>
+							<tr class="fragment top">
+								<td rowspan="3">Baş, Göz, KBB</td>
+								<td class="fragment">Hassasiyet ve deformite</td>
+								<td class="fragment">Travma işaretleri</td>
+							</tr>
+							<tr>
+								<td class="fragment">Papilödem</td>
+								<td class="fragment">Kafa içi basınç artışı, kafa yaralanması</td>
+							</tr>
+							<tr>
+								<td class="fragment">Nefes</td>
+								<td class="fragment">Keton kokusu</td>
+							</tr>
+							<tr class="fragment top">
+								<td rowspan="2">Boyun</td>
+								<td class="fragment">Üfürüm</td>
+								<td class="fragment">Serebrovasküler olay</td>
+							</tr>
+							<tr>
+								<td class="fragment">Juguler venöz dolgunluk</td>
+								<td class="fragment">Sağ kalp yetmezliği (miyokard iskemisi, tamponad, pulmoner emboli)</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Akciğerler</td>
+								<td class="fragment">Solunum sesleri, ral, wheezing</td>
+								<td class="fragment">Enfeksiyon, sol kalp yetmezliği (miyokard iskemisi, nadiren pulmoner emboli)</td>
+							</tr>
+							<tr class="fragment top">
+								<td rowspan="2">Kalp</td>
+								<td class="fragment">Sistolik üfürüm</td>
+								<td class="fragment">Aort stenozu, hipertrofik kardiyomyopati</td>
+							</tr>
+							<tr>
+								<td class="fragment">Frotman</td>
+								<td class="fragment">Perikardit, tamponad</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Batın</td>
+								<td class="fragment">Pulsatil kitle</td>
+								<td class="fragment">Abdominal aort anevrizması</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Pelvis</td>
+								<td class="fragment">Melena, hematokezya</td>
+								<td class="fragment">Anemi, gastrointestinal kanama</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Ekstremiteler</td>
+								<td class="fragment">Üst ekstremitelerde nabız eşitliği</td>
+								<td class="fragment">Subklavyan çalma, torasik aort diseksiyonu</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Nörolojik</td>
+								<td class="fragment">Mental durum, fokal nörolojik bulgular</td>
+								<td class="fragment">Nöbet, inme veya diğer primer nörolojik hastalıklar</td>
+							</tr>
 						</tbody>
 					</table>
 				</section>
+				<section>
+					<img src="laboratuar.png" class="mucerred">
+					<table class="fragment tablo teksatir">
+						<thead>
+							<tr>
+								<td>İnceleme</td>
+								<td>Endikasyon</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td>12 derivasyonlu EKG ve monitörizasyon</td>
+								<td class="fragment">Kardiyak disritmi, iskemi, kardiyomyopati</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Ortostatik vital bulgular</td>
+								<td class="fragment">Ortastatik hipotansiyon veya bradikardi</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Hemogram</td>
+								<td class="fragment">Anemi</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Elektrolitler</td>
+								<td class="fragment">Özellikle hiponatremi, hiperkalemi veya hipokalemi</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Kan şekeri</td>
+								<td class="fragment">Hipoglisemi</td>
+							</tr>
+							<tr class="fragment top">
+								<td>D-Dimer</td>
+								<td class="fragment">Pulmoner emboli</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Kardiyak enzimler</td>
+								<td class="fragment">Miyokard iskemisi</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Beta-hCG</td>
+								<td class="fragment">Gebelik</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Toksikoloji paneli</td>
+								<td class="fragment">İlaç ilişkili senkop</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Kan gazı</td>
+								<td class="fragment">Asit-baz bozukluğu</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Akciğer grafisi</td>
+								<td class="fragment">Torasik aort diseksiyonu</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Kranyal BT veya MR</td>
+								<td class="fragment">Yeni başlangıçlı nöbet, travma, intrakranyal hemoraji</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Ekokardiyogram</td>
+								<td class="fragment">Kardiyak çıkış obstrüksiyonu, tamponad, torasik diseksiyon</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Ventilasyon-perfüzyon sintigrafi</td>
+								<td class="fragment">Pulmoner emboli</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Pulmoner BT anjiyografi</td>
+								<td class="fragment">Pulmoner emboli, torasik aort diseksiyonu</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Abdominal USG veya BT</td>
+								<td class="fragment">Abdominal aort anevrizması</td>
+							</tr>
+							<tr class="fragment top">
+								<td>Pelvik USG</td>
+								<td class="fragment">Ektopik gebelik</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<img src="ozet-tablo-1.png" class="stretch">
+				</section>
+				<section>
+					<img src="ozet-tablo-2.png" class="stretch">
+				</section>
+				<section>
+					<img src="algoritma-1.png" class="stretch">
+				</section>				
+				<section>
+					<img src="algoritma-2.png" class="stretch">
+				</section>				
+				<section>
+					<img src="algoritma-3.png" class="stretch">
+				</section>	
+				<section style="text-align:left">
+					<p>Kaynaklar</p>
+					<img src="bayilma-2.gif" style="float:right;margin-right:1em;margin-top:-1em">
+					<ul>
+						<li>Rosen</li>
+						<li>Tintinalli</li>
+						<li>Adams</li>
+					</ul>
+					<h3>&nbsp;</h3>
+					<h3>Teşekkürler</h3>
+				</section>	
 			</div>
 
 		</div>
@@ -212,7 +385,39 @@
 					{ src: '../plugin/notes/notes.js', async: true },
    				]
 			});
+			
+			var ms = [
+				'Merhaba hocam, sunumum göreceğiniz üzere farklı bir teknoloji kullanacak. Sunumun orijinalinde bu mesajlar görünmeyecek. Bu size sunumu anlatmak için konuldu sadece. Slaytlar arasında sağ ok tuşuyla geçiş yapabilirsiniz. F tuşuyla tam ekran moduna geçebilirsiniz. Çıkmak için Esc\'ye basabilirsiniz.',
+				'Sözcüğün etimolojik kökeniyle kısa bir giriş yapacağım.',
+				'Bu bizden uzman olan Turgut abinin sıkça söylediği bir şeydi, hatta benim aklımda yer edinen ilk "kıdemli incileri"nden biriydi, hoş sohbet babından eklemek istedim.',
+				'Bunlar da kitaplardaki istatistikler. Toplam başvuru sayısına oranları. Aslında bizim acil için de yeşil ve travmayı düşündüğümüzde sayı bu şekilde oluyordur. Hepsi sarıya geldiği için bize çok geliyor.',
+				'Tanım',
+				'Rosen\'dan alınmış bir tablo. Üzerine hepsinin ortak nihai patogenezi gelecek. Sonrasında kısaca üst başlıklara değineceğim.',
+				'Bu da Tintinalli\'den alınan bir tablo. Biraz daha derli toplu olduğu için koydum. Bunda da üst başlıklara kısaca değineceğim.',
+				'Bu da kitapların hepsinde de vurgulanan "öncelikli olarak hayati tanılara yönel" bilgisinden önce hayati tanıların ne olduğunu göstermesi amacıyla koyduğum liste.',
+				'Tanısal Yaklaşım',
+				'Bu iki abi tanının öykü aşamasını temsil ediyor. İlk aşamada hayati tanılara yönelik sorular gelecek.',
+				'Öyküyü detaylandırıyoruz',
+				'Senkopla ilişkili ilaçlar. Solda Tintinalli, sağda Rosen.',
+				'Bu iki abi de muayeneyi temsil ediyor. Bu tablo Rosen\'dan. Görsel olarak daha anlatılabilir olması için ben tekrardan oluşturdum.',
+				'Bu da laboratuar slaytı. Bunu da Rosen\'dan uyarladım ama bi önceki tabloya göre daha "oku-geç" bir tablo oldu. İcabına bakacağız artık.',
+				'Bu tablo da Rosen\'dan. Uzun olduğu için ikiye böldüm. Eğer önceki slaytlarda anlaşılır bir şekilde anlatmayı başarabilirsem bu tabloda her bir etyolojik faktörü "öykü/muayene/laboratuar" açısından yeni gelen arkadaşlara soru cevap şeklinde gitmeyi planlıyorum. Tablo açık olacak ama.',
+				'Tablonun devamı',
+				'Bu ve sonraki üç slaytta kitaplardaki tanı ve yönetim algoritmaları yer alacak. Bu tablo Rosen\'dan',
+				'Tintinalli',
+				'Adams. En sadesi Adams. Ayrıca risk faktörlerini de ek olarak yazdığı için bunu sona koydum. Taburculuk/yatış kararı bahsini de bu slayt üzerinden anlatıp sunumumu nihayete erdirmeyi planlıyorum.',
+				'Son gün gönderdiğim için özür dilerim. Ama bu tür şeyleri olabildiğince en güzel yapmak gibi bir takıntım var, program da biraz yoğun geçti, anca yetiştirebildim hocam.'
+			];
+			
+			var e = Reveal.getState();
+			document.getElementById('hoca').innerHTML = ms[e.indexh];
+			
+			Reveal.addEventListener('slidechanged', function(e){
+				document.getElementById('hoca').innerHTML = ms[e.indexh];
+			});
 
+			var cl = window.location.search.match(/on-izleme/gi ) ? 'hocali' : '';
+			document.getElementsByTagName( 'body' )[0].className += cl;
 		</script>
 
 	</body>
