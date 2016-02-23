@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="tr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Senkop</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/w3.css">
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/umraniye.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+		
+		<link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+			section img.mucerred { border:none; box-shadow:none; background:transparent;}
+			p.bubble { padding:0.5em; margin-bottom:0.5em; background:#fff; border:3px solid #a00; border-radius:10px; position:relative; }
+			p.bubble::after { content:" ";position:absolute;right:100%;top:50%;margin-top:-10px;margin-right:3px;border-width:10px;border-color:transparent #a00 transparent transparent; border-style:solid;}
+			p.warning { padding:0.25em; border:3px solid #fd3; background:#ffd; border-radius:3px; }
+			.tablo { position:absolute; top:0; }
+			.tablo tr { background:rgba(255,255,255,0.95); }
+			.tablo thead tr { background:#c96; color:white;font-weight:bold; }
+			.tablo td { font-size:0.5em; }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Senkop</h1>
+					<h4>Dr. İbrahim Altunok</h4>
+					<h4>Ümraniye EAH Acil Tıp 2016</h4>
+					<img src='bayilma.gif'>
+				</section>
+				<section>
+					<h3>Senkop</h3>
+					<p><i>Yun.</i> Synkoptein <i>(to cut short)</i></p>
+				</section>
+				<section>
+					<h3 style="font-family:'Handlee';"><i>"Kitaplarda senkop için %1-2 yazar ama bize baksan gelen her iki hastadan biri senkop"</i></h3>
+					<p class="fragment" style="font-family:'Handlee';"><i>Uzm. Dr. Turgut Topal</i></p>
+				</section>
+				<section>
+					<p>Adams: %1-2</p>
+					<p>Rosen: %0.8</p>
+					<p>Tintinalli: %1-2</p>
+				</section>
+				<section>
+					<h3>Tanım</h3>
+					<p>Kişinin normal nörolojik durumuna herhangi bir resüsitatif işlem gerekmeksizin geri döndüğü geçici bilinç ve postural tonus kaybı</p>
+				</section>
+				<section>
+					<img src="causes.png" class="stretch">
+					<div class="fragment fade-in">
+						<div class="fragment fade-out" style="background:rgba(255,255,255,1);border:3px solid #f00; padding:1.5em;position:absolute;top:50%;margin-top:-3em;">
+						Her iki serebral korteksin veya beyin sapında bulunan 
+						retiküler aktive edici sistemin 8-10 sn boyunca 
+						beslenememesi veya santral sinir sistemi kan akımının %35-50
+						oranında azalması
+						</div>
+					</div>
+				</section>
+				<section>
+					<img src="causes-tintinalli.png" class="stretch">
+				</section>
+				<section>
+					<img src="critical.png" class="stretch">
+				</section>
+				<section>
+					<h2>Tanısal Yaklaşım</h2>
+					<img class="mucerred" src="Doctor_Male.png">
+					<img class="mucerred" src="Patient_Male.png">
+				</section>
+				<section>
+					<img class="mucerred" src="öykü.png">
+					<div style="position:absolute; left:50%; top:10%;">
+						<p class="fragment bubble">Birden mi, yavaş yavaş mı oldu?</p>
+						<p class="fragment bubble">Otururken/yatarken mi oldu, ayaktayken mi oldu?</p>
+						<p class="fragment bubble">Ne kadar sürdü?</p>
+					</div>
+					<div style="">
+						<p class="fragment warning">
+							Aniden olan, otururken veya yatarken olan ve birkaç saniye süren senkop genellikle ciddi (kardiyak) sebeplerle olur.
+						</p>
+					</div>
+				</section>
+				<section>
+					<img class="mucerred" src="öykü.png">
+					<div style="position:absolute; left:50%; top:10%;">
+						<p class="fragment bubble">
+							Senkop öncesi durum
+							<br>
+							<small>
+								Egzersiz, Uzun süre sıcağa maruziyet, Duygusal stres
+							</small>
+						</p>
+						<p class="fragment bubble">
+							İlişkili Semptomlar
+							<br>
+							<small>
+								Göğüs ağrısı, nefes darlığı, terleme, baş dönmesi, dil ısırması, idrar/gayta inkontinansı
+							</small>
+						</p>
+						<p class="fragment bubble">
+							Özgeçmiş
+							<br>
+							<small>
+								Daha çok acil servis taburculuk kararı ve risk sınıflaması için önemli
+							</small>
+						</p>
+						<p class="fragment bubble">
+							Kullanılan ilaçlar
+						</p>
+					</div>
+					<div style="">
+						<p class="warning" style="visibility:hidden">
+							&nbsp;<br>&nbsp;
+						</p>
+					</div>
+				</section>
+				<section>
+					<img src="muayene2.png" class="mucerred">
+					<table class="tablo">
+						<thead>
+							<tr>
+								<td>Sistem</td>
+								<td>Bulgu</td>
+								<td>Açıklama</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td rowspan="4">Vital bulgular</td>
+								<td class="fragment">Nabız ve ritm</td>
+								<td class="fragment">Taşikardi, bradikardi, diğer disritmiler</td>
+							</tr>
+							<tr class="fragment">
+								<td>Solunum sayısı ve derinliği</td>
+								<td class="fragment">Takipne: hipoksi, hiperventilasyon veya pulmoner emboli</td>
+							</tr>
+							<tr class="fragment">
+								<td>Kan basıncı</td>
+								<td class="fragment">Şok, hipovolemi veya ortostaza yol açabilen ilaç kullanımı</td>
+							</tr>
+							<tr class="fragment">
+								<td>Vücut ısısı</td>
+								<td class="fragment">Sepsis, dehidratasyon, ortostaz</td>
+							</tr>
+							<tr class="fragment">
+								<td>Deri</td>
+								<td class="fragment">Renk, terleme</td>
+								<td class="fragment">Organ perfüzyonunda azalmanın işaretleri</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: 'c/t',
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true },
+   				]
+			});
+
+		</script>
+
+	</body>
+</html>
